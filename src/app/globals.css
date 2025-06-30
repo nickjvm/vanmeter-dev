@@ -1,15 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 @import "tailwindcss";
 
+@theme {
+  --font-display: "Montserrat", "sans-serif";
+  --color-purple: "#7A4D9F";
+}
+html {
+  height: 100%;
+}
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* --background: #ffffff;
+  --foreground: #171717; */
 }
 
 @theme inline {
-  --color-background: var(--background);
+  /* --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-mono: var(--font-geist-mono); */
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +28,55 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  height: 100%;
+  min-height: 100%;
+  background-size: auto auto;
+  background-image: linear-gradient(
+    to right,
+    #a8dacd 0%,
+    #a8dacd 50%,
+    #7a4d9f 50%
+  );
+}
+
+.gridded {
+  background-size: 40px 40px;
+  background-image: radial-gradient(
+    circle,
+    var(--color-slate-400) 1px,
+    rgba(0, 0, 0, 0) 1px
+  );
+}
+/* Social Icons */
+.social-icon {
+  @apply w-7 h-7 text-slate-800 hover:text-white/75 focus:text-white/75 transition-colors;
+}
+
+/* Gradient Header */
+.gradient-header {
+  @apply bg-[#A8DACD];
+  @apply sm:bg-gradient-to-r sm:from-[#A8DACD] sm:via-[#7A4D9F] sm:to-[#7A4D9F];
+  @apply sm:from-[75%] sm:via-[75%];
+  @apply xl:from-[66.6%] xl:via-[66.6%];
+}
+
+/* Main Content Sections */
+.main-content {
+  @apply min-h-full flex flex-col;
+}
+
+/* Two Column Layout */
+.two-column-layout {
+  @apply grid grid-cols-3 h-1/2 min-h-[600px];
+}
+
+/* Left Column */
+.left-column {
+  @apply col-span-2 bg-[#A8DACD]/75 py-12 flex items-center relative z-10 pl-32;
+}
+
+/* Avatar Container */
+.avatar-container {
+  @apply w-[400px] h-[400px] bg-white absolute top-1/2 right-0 transform translate-x-1/2 -translate-y-1/2;
 }
