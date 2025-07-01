@@ -15,9 +15,6 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Next.js collects completely anonymous telemetry data about general usage.
-# Learn more here: https://nextjs.org/telemetry
-ENV NEXT_TELEMETRY_DISABLED 1
 
 # Build the application
 RUN npm run build
@@ -27,7 +24,6 @@ FROM base AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
@@ -48,4 +44,4 @@ EXPOSE 3000
 ENV HOSTNAME "0.0.0.0"
 
 # Start the application
-CMD ["node", "server.js"]
+CMD ["npm", "run", "start"]
