@@ -63,7 +63,7 @@ export default function ProjectCard({ title, href, source, description, tags }: 
                 )}
                 <a href={source} target="_blank" rel="noopener noreferrer" className="h-10.5 relative rounded flex items-center justify-center gap-2 flex-1/2 p-2 border border-slate-800 text-slate-800 group after:content-[''] after:bg-slate-800 after:absolute after:bottom-0 after:left-0 after:top-0 after:block after:w-[0px] after:mix-blend-soft-light hover:after:w-full after:transition-[width] after:duration-300">
                     <FaGithub className="w-4 h-4" />
-                    Source code</a>
+                    Github repo</a>
             </div>
         </div>
     )

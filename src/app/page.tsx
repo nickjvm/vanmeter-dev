@@ -14,16 +14,19 @@ export default function Home() {
               <li>
                 <a href="https://github.com/nickjvm" target="_blank" rel="noopener noreferrer" className="hover:text-white/75 transition focus:text-white/75">
                   <FaGithub className="social-icon" />
+                  <span className="sr-only">github</span>
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/nickvanmeter" target="_blank" rel="noopener noreferrer" className="hover:text-white/75 transition focus:text-white/75">
                   <FaLinkedin className="social-icon" />
+                  <span className="sr-only">linkedin</span>
                 </a>
               </li>
               <li>
                 <a href="mailto:nick@vanmeter.dev" target="_blank" rel="noopener noreferrer" className="hover:text-white/75 transition focus:text-white/75">
                   <MdOutlineAlternateEmail className="social-icon" />
+                  <span className="sr-only">email</span>
                 </a>
               </li>
             </ul>
@@ -32,7 +35,7 @@ export default function Home() {
       </header>
 
       <div className="gridded">
-        <div className="w-full max-w-5xl mx-auto grid grid-cols-4 lg:grid-cols-4 md:min-h-[400px] items-center">
+        <div className="w-full max-w-5xl mx-auto grid grid-cols-4 lg:grid-cols-4 md:min-h-[500px] items-center">
           <div className="col-span-4 md:col-span-3 lg:col-span-3 bg-[#A8DACD] h-full flex items-center order-2 md:order-1">
             <div className="h-full w-full gridded flex items-center ">
               <div className="relative w-full md:max-w-260 ml-auto md:px-24 px-6 text-center md:text-left pt-24 pb-8 md:pt-0 md:pb-0">
@@ -45,7 +48,7 @@ export default function Home() {
                   </span>
                   <div className="w-full flex justify-between text-left text-slate-500
                 lg:text-lg md:text-md text-sm">
-                    <span>front end engineer</span>
+                    <span>front-end engineer</span>
                     <span>react developer</span>
                     <span>tech enthusiast</span>
                   </div>
@@ -57,7 +60,7 @@ export default function Home() {
             <div className="gridded h-full w-full flex items-center">
 
               <div className="w-full md:max-w-100 text-center">
-                <Image src="/avatar.png" alt="avatar" width={400} height={400} className="relative md:-left-1/2 inline translate-y-[38%] md:translate-y-0 md:mb-0 md:w-auto max-w-full w-[200px] rounded-full md:rounded" />
+                <Image src="/avatar.png" alt="nick vanmeter profile photo" width={400} height={400} className="relative md:-left-1/2 inline translate-y-[38%] md:translate-y-0 md:mb-0 md:w-auto max-w-full w-[200px] rounded-full md:rounded" />
               </div>
             </div>
           </div>
@@ -68,7 +71,7 @@ export default function Home() {
           <div className="col-span-4 space-y-12">
             <div className="space-y-4 max-w-3xl mx-auto">
               <div className="text-center space-y-2 flex flex-col items-center justify-center mb-12">
-                <p className="rounded font-bold md:text-5xl sm:text-3xl text-xl font-display bg-slate-800 text-white px-2 inline-block">seasoned front-end engineer</p>
+                <p className="rounded font-bold md:text-5xl sm:text-3xl text-xl font-display bg-slate-800 text-white px-2 inline-block">senior front-end engineer</p>
                 <p className="rounded font-bold md:text-2xl sm:text-xl text-md font-display bg-slate-800 text-white px-2 inline-block">user experience, design & development</p>
                 <p className="rounded font-bold md:text-sm sm:text-xs text-xs font-display bg-slate-800 text-white px-2 inline-block">(and dogs, sourdough, trails & crochet)</p>
               </div>
@@ -96,7 +99,7 @@ export default function Home() {
                 href="https://restaurant-matcher.vanmeter.dev/"
                 source="https://github.com/nickjvm/restaurant-matcher"
                 description="Tinder-style restaurant pairing game designed to answer the age-old question: “Where should we eat tonight?”"
-                tags={["react", "next.js", "typescript", "tailwind", "node", "socket.io", "railway", "docker"]} />
+                tags={["react", "next.js", "typescript", "tailwind", "framer/motion", "node", "socket.io", "railway", "docker"]} />
             </div>
           </div>
         </div>
