@@ -29,15 +29,18 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 # Copy the built application
+# Copy the public directory
 COPY --from=builder /app/public ./public
 
-# Copy the standalone directory which contains the server.js file
-# https://nextjs.org/docs/app/api-reference/config/next-config-js/output
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+# Copy the standalone server files to the root
+# This copies the contents of .next/standalone to the root of the container
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone/ ./
+
+# Copy static files
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
-# Set the working directory to the app directory
-WORKDIR /app/.next/standalone
+# Set the working directory to where the files were copied
+WORKDIR /app
 
 USER nextjs
 
