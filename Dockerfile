@@ -15,7 +15,6 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-
 # Build the application
 RUN npm run build
 
@@ -24,16 +23,21 @@ FROM base AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
+ENV PORT 3000
 
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
+# Copy the built application
 COPY --from=builder /app/public ./public
 
-# Automatically leverage output traces to reduce image size
-# https://nextjs.org/docs/advanced-features/output-file-tracing
+# Copy the standalone directory which contains the server.js file
+# https://nextjs.org/docs/app/api-reference/config/next-config-js/output
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Set the working directory to the app directory
+WORKDIR /app/.next/standalone
 
 USER nextjs
 
@@ -44,4 +48,4 @@ EXPOSE 3000
 ENV HOSTNAME "0.0.0.0"
 
 # Start the application
-CMD ["npm", "run", "start"]
+CMD ["node", "server.js"]
