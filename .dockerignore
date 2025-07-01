@@ -1,0 +1,29 @@
+# Dependencies
+node_modules
+.next
+
+# Build outputs
+.next
+out
+
+# Debug logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Local env files
+.env*.local
+.env
+
+# IDE and editor files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS files
+.DS_Store
+Thumbs.db
