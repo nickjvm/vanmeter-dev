@@ -125,7 +125,7 @@ export default function Home() {
             </div>
             <div className="relative w-full grid md:grid-cols-3 gap-10 px-4 lg:px-0">
               <ProjectCard
-                title="🍽️ reciparse"
+                title="🍽️ Reciparse"
                 href="https://reciparse.com"
                 source="https://github.com/nickjvm/reciparse"
                 description="Recipe viewer that extracts and displays clean, clutter-free recipe content from popular food websites. It pulls in the essential details and removes distractions like intrusive ads and annoying popups."
@@ -136,11 +136,29 @@ export default function Home() {
                   "tailwind",
                   "node",
                   "express",
+                  "postgres",
                   "vercel",
                 ]}
               />
               <ProjectCard
-                title="🛒 sync shop"
+                title="🌮 TacoTok"
+                href="https://tacotok.lol/"
+                source="https://github.com/nickjvm/tacotok"
+                description="Pairing the social appeal of TikTok with Taco Tuesday. Generative AI pulls recipes from videos via the TikTok oEmbed API, and a schedule randomly selects a new recipe to feature weekly."
+                tags={[
+                  "react",
+                  "next.js",
+                  "typescript",
+                  "sqlite",
+                  "tailwind",
+                  "gen ai",
+                  "oembed",
+                  "railway",
+                  "docker",
+                ]}
+              />
+              <ProjectCard
+                title="🛒 Sync Shop"
                 href="https://socket-shopping.vanmeter.dev/"
                 source="https://github.com/nickjvm/socket-shopping-list"
                 description="Minimalist, collaborative shopping list app inspired by the simplicity of iOS Reminders. It uses generative AI to automatically categorize items as they’re added and enables real-time updates across shared lists."
@@ -157,7 +175,7 @@ export default function Home() {
                 ]}
               />
               <ProjectCard
-                title="📸 timelapse"
+                title="📸 Timelapse"
                 href="https://timelapse.vanmeter.dev/"
                 source="https://github.com/nickjvm/timelapse"
                 description="An app that simplifies the creation of timelapses from a series of images. All data is stored locally via IndexedDB. Images are compressed and base64 encoded, and comparison views and edited images can be exported as pngs."
@@ -175,7 +193,7 @@ export default function Home() {
                 ]}
               />
               <ProjectCard
-                title="🍔 taste match"
+                title="🍔 Restaurant Match"
                 href="https://restaurant-matcher.vanmeter.dev/"
                 source="https://github.com/nickjvm/restaurant-matcher"
                 description="Tinder-style restaurant pairing game designed to answer the age-old question: “Where should we eat tonight?”"
@@ -192,7 +210,7 @@ export default function Home() {
                 ]}
               />
               <ProjectCard
-                title="🖨️ trainerize extension"
+                title="🖨️ Trainerize Extension"
                 source="https://github.com/nickjvm/trainerize-extension"
                 description="An interesting way to experiment with the browser extension API, this extension generates a printer-friendly report of the last 7 days of meal logs."
                 tags={["typescript", "browser extension API"]}
