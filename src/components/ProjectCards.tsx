@@ -7,10 +7,10 @@ export default async function ProjectCards() {
       repo: "reciparse",
       name: "🍽️ Reciparse",
     },
-    {
-      repo: "tacotok",
-      name: "🌮 TacoTok",
-    },
+    // {
+    //   repo: "tacotok",
+    //   name: "🌮 TacoTok",
+    // },
     {
       repo: "socket-shopping-list",
       name: "🛒 Sync Shop",
@@ -23,10 +23,10 @@ export default async function ProjectCards() {
       repo: "timelapse",
       name: "📸 Timelapse",
     },
-    {
-      name: "🔮 Will it Taco?",
-      repo: "will-it-taco",
-    },
+    // {
+    //   name: "🔮 Will it Taco?",
+    //   repo: "will-it-taco",
+    // },
   ]);
 
   return (
