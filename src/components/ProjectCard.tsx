@@ -26,9 +26,10 @@ export default function ProjectCard({
       return;
     }
     const checkStatus = () => {
-      fetch("/api/appStatus?url=" + href).then((r) => {
+      fetch("/api/appStatus?url=" + href).then(async (r) => {
         if (r.ok) {
-          setOnline(true);
+          const data = await r.json();
+          setOnline(data.online);
           if (intervalRef.current) {
             clearInterval(intervalRef.current);
           }
@@ -38,6 +39,8 @@ export default function ProjectCard({
             intervalRef.current = setInterval(() => {
               checkStatus();
             }, 5000);
+          } else {
+            setOnline(false);
           }
         }
       });
